@@ -1,0 +1,534 @@
+body{
+    font-family: 'Source code pro', Calibri, serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2F2;
+    color: #404040;
+}
+
+#bandeau {
+    background-color: #0f1c5f;
+    height: 120px;
+}
+
+#bandeau #titre h1 {
+    margin-top: 2%;
+    vertical-align: bottom;
+    font-size: 50px;
+    color: #cfc077;
+    text-shadow: 1px 0 0 #F2F2F2, 0 1px 0 #F2F2F2, 0 -1px 0 #F2F2F2, -1px 0 0 #F2F2F2, 1px 1px 0 #F2F2F2, 1px -1px 0 #F2F2F2, -1px 1px 0 #F2F2F2, -1px -1px 0 #F2F2F2;
+}
+
+#bandeau #image-titre {
+    display: inline-block;
+    width: 475px;
+    height: 120px;
+}
+
+#bandeau #image-titre img {
+    width: 100%;
+    height: 120px;
+}
+
+#bandeau #titre {
+    display: inline-block;
+    width: 74.5%;
+    height: 100%;
+    text-align: center;
+    vertical-align: top;
+}
+
+nav{
+    width: 100%;
+    background-color: #b9b9b9;
+    display: block;
+}
+
+nav > ul{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+nav > ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav > ul > li{
+    float: left;
+    position: relative;
+    width: 20%;
+    text-align: center;
+    border-top: 5px solid #db1f13;
+}
+
+nav > ul > li > ul {
+    width: 100%;
+    font-weight: 200;
+}
+
+nav > ul > li > a{
+    padding: 20px 30px;
+    color: #404040;
+}
+
+nav > ul > li:hover > a{
+    padding: 20px 30px 20px 30px;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+.submenu{
+    display: none;
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav li:hover .submenu{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    z-index: 1000;
+}
+
+.submenu li{
+    border-bottom: 1px solid #CCC;
+}
+
+.submenu li a{
+    padding: 15px 0;
+    font-size: 15px;
+    color: #222538;
+    width: 100%;
+}
+
+.menu:hover, #active {
+    border-top: 5px solid #cfc077;
+    background-color: rgba(241, 244, 66, 0.15);
+    font-weight: bold;
+}
+
+.menu .submenu{
+    background-color: #cfc077;
+}
+
+.submenu li:hover a{
+    color: #F2F2F2;
+}
+
+.menu .submenu li:hover{
+    background-color: rgb(200, 165, 75);
+}
+
+.contenu {
+    margin: 50px;
+}
+
+#gauche {
+    display: inline-block;
+    width: 39%;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+}
+
+#droite {
+    display: inline-block;
+    width: 39%;
+    background-color: #A6A6A6;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+}
+
+/* RESPONSIVE GLOBAL */
+@media only screen and (max-width: 1880px) {
+    #bandeau #titre {
+        width: 72%;
+    }
+}
+
+@media only screen and (max-width: 1855px) {
+    
+
+    #bandeau #titre h1 {
+        font-size: 48px;
+        margin-top: 2.1%;
+    }
+}
+
+@media only screen and (max-width: 1820px) {
+  
+    #bandeau #titre h1 {
+        font-size: 47px;
+        margin-top: 2.2%;
+    }
+}
+
+@media only screen and (max-width: 1780px) {
+  
+    #bandeau #titre h1 {
+        font-size: 46px;
+        margin-top: 2.3%; 
+    }
+}
+
+@media only screen and (max-width: 1740px) {
+  
+    #bandeau #titre {
+        width: 70%;
+    }
+
+    #bandeau #titre h1 {
+        font-size: 45px;
+        margin-top: 2.4%;
+    }
+}
+
+@media only screen and (max-width: 1700px) {
+  
+    #bandeau #titre h1 {
+        font-size: 44px;
+        margin-top: 2.5%;
+    }
+}
+
+@media only screen and (max-width: 1670px) {
+  
+    #bandeau #titre h1 {
+        font-size: 43px;
+        margin-top: 2.6%;
+    }
+}
+
+@media only screen and (max-width: 1630px) {
+  
+    #bandeau #titre h1 {
+        font-size: 42px;
+        margin-top: 2.7%;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+  
+    #bandeau #titre {
+        width: 68%;
+    }
+
+    #bandeau #titre h1 {
+        font-size: 40px;
+        margin-top: 3.2%;
+    }
+}
+
+@media only screen and (max-width: 1560px) {
+  
+    #bandeau #titre h1 {
+        font-size: 39px;
+        margin-top: 3.3%;
+    }
+}
+
+@media only screen and (max-width: 1520px) {
+  
+    #bandeau #titre h1 {
+        font-size: 38px;
+        margin-top: 3.4%;       
+    }
+}
+
+@media only screen and (max-width: 1520px) {
+  
+    #bandeau #titre {
+        width: 66%;
+    }
+
+    #bandeau #titre h1 {
+        font-size: 37px;
+        margin-top: 3.5%;
+    }
+}
+
+@media only screen and (max-width: 1490px) {
+ 
+    #bandeau #titre h1 {
+        font-size: 36px;
+        margin-top: 3.8%;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+ 
+    #bandeau #titre h1 {
+        font-size: 35px;
+        margin-top: 4%;
+    }
+}
+
+@media only screen and (max-width: 1410px) {
+ 
+    #bandeau #titre {
+        width: 64%;
+    }
+
+    #bandeau #titre h1 {
+        font-size: 33px;
+        margin-top: 4.5%;
+    }
+}
+
+@media only screen and (max-width: 1370px) {
+
+    #bandeau #titre h1 {
+        font-size: 40px;
+        margin-top: 1.3%;
+    }
+}
+
+@media only screen and (max-width: 1370px) {
+
+    #bandeau #titre {
+        width: 62%;
+    }
+}
+
+@media only screen and (max-width: 1270px) {
+
+    #bandeau #titre {
+        width: 60%;
+    }
+
+}
+
+@media only screen and (max-width: 1240px) {
+
+    #bandeau #titre {
+        width: 60%;
+    }
+
+    #gauche, #droite {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+    #bandeau #titre {
+        width: 58%;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+
+    #bandeau #titre {
+        width: 56%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    #bandeau #titre {
+        width: 54%;
+    }
+
+    #bandeau #titre h1 {
+        font-size: 38px;
+        margin-top: 2.2%;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+
+    #bandeau #titre {
+        width: 52%;
+    }
+
+    #bandeau #titre h1 {
+        font-size: 36px;
+        margin-top: 2.4%;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+
+    #bandeau #titre {
+        width: 50%;
+    }
+
+    #bandeau #titre h1 {
+        font-size: 34px;
+        margin-top: 3.6%;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+
+    #bandeau #titre {
+        width: 50%;
+    }
+
+    #bandeau #titre h1 {
+        font-size: 32px;
+        margin-top: 4%;
+    }
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 1000px) {
+
+    #bandeau {
+        height: 240px;
+    }
+
+    #bandeau #titre {
+        display: block;
+        width: 100%;
+    }
+
+    #bandeau #image-titre {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    #bandeau #image-titre img {
+        width: 475px;
+    }
+
+    #bandeau #titre h1 {
+        font-size: 45px;
+        margin-top: .5%;
+    }
+}
+
+@media only screen and (max-width: 710px) {
+
+    #bandeau #titre h1 {
+        font-size: 44px;
+        margin-top: .5%;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+
+    #bandeau #titre h1 {
+        font-size: 43px;
+        margin-top: .5%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    #bandeau #titre h1 {
+        font-size: 42px;
+        margin-top: 1%;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+
+    #bandeau #titre h1 {
+        font-size: 40px;
+        margin-top: 2%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #bandeau #titre h1 {
+        font-size: 38px;
+        margin-top: 2.5%;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    #bandeau #titre h1 {
+        font-size: 36px;
+        margin-top: 3%;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+
+    #bandeau #titre h1 {
+        font-size: 34px;
+        margin-top: 3.5%;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+
+    #bandeau #titre h1 {
+        font-size: 33px;
+        margin-top: 4%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    #bandeau #titre h1 {
+        font-size: 32px;
+        margin-top: 4.5%;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+
+    #bandeau #titre h1 {
+        font-size: 30px;
+        margin-top: 5%;
+    }
+
+    #bandeau #titre {
+        height: auto;
+    }
+
+    #bandeau #image-titre {
+        height: auto;
+    }
+
+    #bandeau #image-titre img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+
+    #bandeau #titre h1 {
+        font-size: 28px;
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+
+    #bandeau #titre h1 {
+        font-size: 26px;
+        margin-top: 7%;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+
+    #bandeau #titre h1 {
+        font-size: 26px;
+        margin-top: 9%;
+    }
+}

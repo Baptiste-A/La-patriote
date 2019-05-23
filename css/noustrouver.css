@@ -1,0 +1,30 @@
+iframe {
+    width: 95%;
+    height: 790px;
+    border: 0;
+}
+
+.social {
+    width: 25%;
+    text-align: center;
+}
+
+#facebook {
+    background-color: #4267b2;
+    padding: 30px;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+
+a #facebook  {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+#droite {
+    vertical-align: top;
+}

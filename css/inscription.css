@@ -1,0 +1,63 @@
+.red {
+    color: red;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 200;
+}
+
+table {
+    font-size: 20px;
+    font-weight: 200;
+    border-collapse: collapse;
+}
+
+.instruction {
+    width: 65%;
+}
+
+tr {
+    height: 100px;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.bouton {
+    background-color: #b9b9b9;
+    text-decoration: none;
+    color: #404040;
+    padding: 15px;
+    width: 40%;
+    display: block;
+    margin: auto
+}
+
+.bouton:hover {
+    background-color: #cfc077;
+}
+
+.btn {
+    text-align: center;
+}
+
+#ou {
+    font-size: 30px;
+    margin: 20px;
+    background-color: #cfc077;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.numero {
+    font-size: 40px;
+    font-weight: 100;
+    margin: 8px;
+}
+
+#texte-rouge {
+    font-size: 16px;
+}
+
+#etoile {
+    font-size: 40px;
+}
