@@ -1,0 +1,32 @@
+.contenu, .contenu h1 {
+    font-weight: 200;  
+}
+
+.contenu h1 {
+    font-size: 70px;
+}
+
+.contenu {
+    font-size: 20px;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+strong {
+    font-weight: 900;
+}
+
+tr, td {
+    border: 1px solid rgb(216, 216, 216);
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
