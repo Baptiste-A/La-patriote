@@ -2,7 +2,6 @@
 -faire les autres pages
 -mettre du vrai contenu
 -faire qqch psk le bouton facebook de la page "nous trouver" est cheum de ouf
--faire marcher le form de la page "inscription" + CSS + contenu + php
 -changer le css du menu
 -RESPONSIVE PARTOUUUUUT
 -changer la couleur de surlignage de la souris
