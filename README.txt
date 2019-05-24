@@ -5,6 +5,7 @@
 -changer le css du menu
 -RESPONSIVE PARTOUUUUUT
 -changer la couleur de surlignage de la souris
+-/!\ RESPONSIVE TITRE A REVOIR
 
 A VOIR :
 
