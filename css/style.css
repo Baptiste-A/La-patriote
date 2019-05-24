@@ -138,6 +138,7 @@ nav li:hover .submenu{
 #gauche {
     display: inline-block;
     width: 39%;
+    background-color: #8f8f8f;
     padding: 20px;
     padding-left: 50px;
     padding-right: 50px;
@@ -147,12 +148,18 @@ nav li:hover .submenu{
 #droite {
     display: inline-block;
     width: 39%;
-    background-color: #b9b9b9;
+    background-color: #727272;
     padding: 20px;
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 10px;
 }
+
+ 
+  #footer{
+    height: 100px;
+    background-color: #b9b9b9;
+  }
 
 /* RESPONSIVE GLOBAL */
 @media only screen and (max-width: 1880px) {
