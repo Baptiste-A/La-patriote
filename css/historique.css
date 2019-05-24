@@ -2,3 +2,11 @@
     background-color: #F2F2F2;
     vertical-align: top;
 }
+
+.contenu, .contenu h1 {
+    font-weight: 200;
+}
+
+ul {
+    list-style-type: '- ';
+}
