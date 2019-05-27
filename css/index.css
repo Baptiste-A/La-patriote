@@ -3,6 +3,10 @@
     height:100%;
 }
 
+#droite, #gauche {
+    background-color: #b9b9b9;
+}
+
 @media only screen and (max-width: 1835px) {
     #gauche, #droite{
         width: 37%;
