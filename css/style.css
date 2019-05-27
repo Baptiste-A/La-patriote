@@ -164,10 +164,36 @@ nav li:hover .submenu{
 }
 
  
-  #footer{
-    height: 100px;
-    background-color: #b9b9b9;
-  }
+#footer{
+    height: auto;
+    background-color: #4e4e4e;
+    color: #bbbbbb;
+}
+
+#sponsors{
+    margin-left: 5%;
+    display: inline-block;
+}
+
+#sponsors img{
+    height: 70px;
+    width: auto;
+}
+
+#cnds{
+    background-color: white;
+}
+
+#rezo{
+    display: inline-block;
+    margin-left: 5%;
+}
+
+#rezo img{
+    width: 70px;
+    height: auto;
+}
+
 
 /* RESPONSIVE GLOBAL */
 @media only screen and (max-width: 1880px) {
