@@ -1,0 +1,27 @@
+.contenu, .contenu h1 {
+    font-weight: 200;  
+}
+
+.contenu h1 {
+    font-size: 70px;
+}
+
+.entraineur, .entraineur h1, .entraineur h3, .entraineur-benevole, .entraineur-benevole h1 {
+    font-weight: 200;
+}
+
+.entraineur, .entraineur-benevole {
+    background-color: #b9b9b9;
+    width: 18%;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 10px;
+    margin: 50px;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 1px 1px 5px #555;
+}
+
+.entraineur-benevole {
+    margin: 2%;
+}

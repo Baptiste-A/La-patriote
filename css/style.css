@@ -7,6 +7,16 @@ body{
     color: #404040;
 }
 
+::-moz-selection {
+    color: none;
+    background: none;
+}
+
+::selection {
+    color: none;
+    background: none;
+}
+
 #bandeau {
     background-color: #0f1c5f;
     height: 120px;
