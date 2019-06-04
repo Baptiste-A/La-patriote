@@ -2,6 +2,7 @@
 -faire qqch psk le bouton facebook de la page "nous trouver" est cheum de ouf
 -changer le css du menu
 -RESPONSIVE PARTOUUUUUT
+-responsive footer
 
 A VOIR :
 
