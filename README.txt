@@ -1,7 +1,7 @@
 -faire marcher le form de la page "contact" + CSS
 -faire qqch psk le bouton facebook de la page "nous trouver" est cheum de ouf
 -changer le css du menu
--RESPONSIVE PARTOUUUUUT
+-responsive sur les 2 dernières pages
 -responsive footer
 
 A VOIR :
