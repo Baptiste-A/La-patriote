@@ -61,3 +61,26 @@ tr {
 #etoile {
     font-size: 40px;
 }
+
+/*MOBILE*/
+@media only screen and (max-width: 1000px) {
+    h2 {
+        font-size: 50px;
+    }
+    
+    .bouton {
+        padding: 2%;
+        width: 100%;
+        font-size: 14px;
+        margin:0;
+    }
+
+    .contenu {
+        margin: 10%;
+    }
+
+    #ou {
+        font-size: 18px;
+        padding: 2%;
+    }
+}

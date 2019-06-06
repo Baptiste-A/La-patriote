@@ -10,3 +10,12 @@
 ul {
     list-style-type: '- ';
 }
+
+/*MOBILE*/
+@media only screen and (max-width: 1000px) {
+    #gauche, #droite {
+        width: 90%;
+        padding: 2%;
+        margin: 3%;
+    }
+}

@@ -34,3 +34,14 @@ table {
     text-align: center;
     margin: auto;
 }
+
+/*MOBILE*/
+@media only screen and (max-width: 1000px) {
+    .contenu h1 {
+        font-size: 50px;
+    }
+
+    table {
+        font-size: 16px;
+    }
+}
