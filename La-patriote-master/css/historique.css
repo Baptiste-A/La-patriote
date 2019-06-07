@@ -1,0 +1,21 @@
+#droite {
+    background-color: #F2F2F2;
+    vertical-align: top;
+}
+
+.contenu, .contenu h1 {
+    font-weight: 200;
+}
+
+ul {
+    list-style-type: '- ';
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 1000px) {
+    #gauche, #droite {
+        width: 90%;
+        padding: 2%;
+        margin: 3%;
+    }
+}
