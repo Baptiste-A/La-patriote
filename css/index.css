@@ -7,6 +7,35 @@
     background-color: #b9b9b9;
 }
 
+#form-gauche, #form-droite {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+.contenu {
+    margin-bottom: 10px;
+}
+
+#resultat-gauche, #resultat-droite {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    margin-top: 0; 
+}
+
+.succes {
+    background-color: green;
+}
+
+.erreur {
+    background-color: red;
+}
+
 @media only screen and (max-width: 1835px) {
     #gauche, #droite{
         width: 37%;

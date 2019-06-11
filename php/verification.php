@@ -7,7 +7,7 @@
     $req = $db->query('Select * FROM connexion');
     while ($resultat = $req->fetch())
     {
-        if (($username == $resultat['username']) && ($password == $resultat['pwd']))
+        if (($username == $resultat['usernamedb']) && ($password == $resultat['passworddb']))
         {
             /*CODE quand connecter */
             session_start(); // ouverture session

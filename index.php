@@ -69,14 +69,17 @@
         </div>
         <?php if (isset($_SESSION['usrnm'])) {?>
             <form method="POST" enctype="multipart/form-data">
-                <input type="file" name="photo" /><br>
-                <label for="nom">Nom de l'image :</label><br />
-                <textarea name="nom" id="nom"></textarea><br />
-                <input type="submit" name="submit" value="Envoyer" /><br/>
+                <div id="form-gauche">
+                    <input type="file" name="photo" /><br>
+                    <label for="nom">Nom de l'image :</label>
+                    <input type="text" name="nom" id="nom"/><br />
+                </div>
 
-                <input type="file" name="photod" /><br>
-                <label for="nomd">Nom de l'image :</label><br />
-                <textarea name="nomd" id="nomd"></textarea><br />
+                <div id="form-droite">
+                    <input type="file" name="photod" /><br>
+                    <label for="nomd">Nom de l'image :</label>
+                    <input type="text" name="nomd" id="nomd"/><br />
+                </div>
                 <input type="submit" name="submit" value="Envoyer" />
 
             </form>
@@ -93,9 +96,9 @@
                 if(move_uploaded_file($file_tmp_name, $file_dest)){
                     $req = $db->prepare('INSERT INTO photo(nom, chemin) VALUES(?,?)');
                     $req->execute(array($nom, $file_dest));
-                    echo("succes");
+                    echo("<p id=\"resultat-droite\" class=\"succes\">Succès</p>");
                 }else{
-                    echo("erreur");
+                    echo("<p id=\"resultat-droite\" class=\"erreur\">Erreur</p>");
                 }
             }
 
@@ -108,9 +111,9 @@
                 if(move_uploaded_file($file_tmp_name, $file_dest)){
                     $req = $db->prepare('INSERT INTO photod(nomd, chemind) VALUES(?,?)');
                     $req->execute(array($nom, $file_dest));
-                    echo("succes");
+                    echo("<p id=\"resultat-gauche\" class=\"succes\">Succès</p>");
                 }else{
-                    echo("erreur");
+                    echo("<p id=\"resultat-gauche\" class=\"erreur\">Erreur</p>");
                 }
             }
         ?>
