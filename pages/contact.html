@@ -20,7 +20,7 @@
 
         <nav>
             <ul>
-                <li class="menu"><a href="../index.html">Accueil</a></li>
+                <li class="menu"><a href="../index.php">Accueil</a></li>
                 <li class="menu"><a href="#">Inscription</a>
                     <ul class="submenu">
                         <li><a href="inscription.html">Inscription</a></li>
@@ -37,7 +37,7 @@
                 <li class="menu"><a href="#">Le club</a>
                     <ul class="submenu">
                         <li><a href="historique.html">Historique</a></li>
-                        <li><a href="entraineurs.html">Entraineurs</a></li>
+                        <li><a href="entraineurs.php">Entraineurs</a></li>
                     </ul>
                 </li>
                 <li class="menu" id="active"><a href="#">Nous contacter</a>
@@ -50,7 +50,7 @@
         </nav>
 
         <div class="contenu" id="contact">
-            <from>
+            <from id="contact" method="post" action="../php/email.php">
                 <h1>Nous contacter</h1>
                 <table>
                     <tr>
@@ -58,7 +58,7 @@
                         <td><input type="text"/></td>
                     </tr>
                     <tr>
-                        <td><label for="mail">E-Mail : </label></td>
+                        <td><label for="email">E-Mail : </label></td>
                         <td><input type="email"/></td>
                     </tr>
                     <tr>
@@ -66,12 +66,13 @@
                         <td><textarea id="message" cols="30" rows="10"></textarea></td>
                     </tr>
                     <tr>
-                        <td><input type="submit"></td>
-                        <td><input type="reset" value="reset"></td>
+                        <td><input id="reset" type="reset" value="Annuler"/></td>
+                        <td><input type="submit" name="submit" value="Envoyer" /></td>  
                     </tr>
                 </table>
             </from>
         </div>
+
         <div id="footer">
             <div id="sponsors">
                 <p>Nos sponsors :<br/>

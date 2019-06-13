@@ -48,7 +48,7 @@
                 <li class="menu"><a href="#">Le club</a>
                     <ul class="submenu">
                         <li><a href="pages/historique.html">Historique</a></li>
-                        <li><a href="pages/entraineurs.html">Entraineurs</a></li>
+                        <li><a href="pages/entraineurs.php">Entraineurs</a></li>
                     </ul>
                 </li>
                 <li class="menu"><a href="#">Nous contacter</a>
