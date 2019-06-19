@@ -6,7 +6,7 @@
 -Mail : précisé en bas
  Mdp : Patriote87
 -Bouton facebook page accueil
--
+-mettre redirection sur quomodo
 
 A VOIR :
 
