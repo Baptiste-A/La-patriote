@@ -1,4 +1,12 @@
 -responsive footer
+-les compétiteurs doivent fournir un certificat médical tous les ans
+-voir responsive petit laptop
+-horaires : mercredi 
+-toutes les horaires modifiables en php
+-Mail : précisé en bas
+ Mdp : Patriote87
+-Bouton facebook page accueil
+-
 
 A VOIR :
 
