@@ -1,0 +1,22 @@
+#envoye {
+    font-weight: 200;  
+    font-size: 70px;
+    text-align: center;
+}
+
+#retour {
+    padding: 10px;
+    border: 2px solid #cfc077;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #404040;
+}
+
+#retour:hover {
+    background-color: #cfc077;
+}
+
+#bouton{
+    width: 100%;
+    text-align: center;
+}

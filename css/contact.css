@@ -10,10 +10,6 @@
     font-size: 20px;
 }
 
-/*table {
-    margin: auto;
-}
-
 td {
     padding: 10px;
 }
@@ -24,12 +20,22 @@ input, textarea {
     border-radius: 4px;
 }
 
+#nom, #email {
+    width:260px;
+}
+
+textarea {
+    width:260px;
+    height:170px;
+    transition: .2s;
+}
+
 input:focus, textarea:focus, input:hover, textarea:hover {
     background-color: #cfc077;
     color: white;
 }
 
 textarea:focus {
-    width: 900px;
-    height: 300px;
-}*/
+    width: 500px;
+    transition: .2s;
+}

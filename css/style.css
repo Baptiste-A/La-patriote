@@ -165,18 +165,20 @@ nav li:hover .submenu{
 
  
 #footer{
-    height: auto;
+    height: 140px;
     background-color: #4e4e4e;
     color: #bbbbbb;
+    text-align: center;
 }
 
 #sponsors{
-    margin-left: 5%;
+    margin-left: 3%;
+    margin-top: 1%;
     display: inline-block;
 }
 
 #sponsors img{
-    height: 70px;
+    height: 90px;
     width: auto;
 }
 
@@ -189,11 +191,34 @@ nav li:hover .submenu{
     margin-left: 5%;
 }
 
-#rezo img{
-    width: 70px;
-    height: auto;
+.info{
+    color: #cfc077;
+}
+#rezo p a{
+    text-decoration: none;
+    color: #bbbbbb;
+    color: #cfc077;
 }
 
+#rezo p{
+    text-align: initial;
+}
+
+#conn p a{
+    text-decoration: none;
+    color: #bbbbbb;
+}
+
+#conn p a:hover {
+    color: #cfc077;
+}
+
+#conn p {
+    text-align: right;
+    margin-bottom: 0;
+    margin-top: -70px;
+    margin-right: 30px;
+}
 
 /* RESPONSIVE GLOBAL */
 @media only screen and (max-width: 1880px) {

@@ -4,34 +4,6 @@ iframe {
     height: 100%;
 }
 
-.social {
-    width: 25%;
-    text-align: center;
-    margin: 50px;
-}
-
-#facebook {
-    background-color: #4267b2;
-    padding: 30px;
-    width: 100%;
-    font-size: 30px;
-    text-align: center;
-}
-
-a #facebook  {
-    color: white;
-}
-
-a {
-    text-decoration: none;
-}
-
-.map {
-    width: 90%;
-    height: 600px;
-    margin: 50px;
-}
-
 #droite {
     vertical-align: top;
     width: 75%;
@@ -49,6 +21,31 @@ a {
     list-style-type: '- ';
 }
 
-td {
-    width: 50%;
+.cellule {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    height: 500px;
+    text-align: left;
+}
+
+.ligne {
+    margin: 30px;
+    text-align: center;
+}
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 1375px) {
+    .cellule {
+        width: 48%;
+        overflow: auto;
+    }
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 1000px) {
+    .cellule {
+        display: block;
+        width: 100%;
+    }
 }
