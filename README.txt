@@ -1,6 +1,3 @@
--faire marcher le form de la page "contact" + CSS + PHPMailer
--faire qqch psk le bouton facebook de la page "nous trouver" est cheum de ouf
--responsive sur les 2 dernières pages
 -responsive footer
 
 A VOIR :
