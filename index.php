@@ -6,6 +6,8 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/index.css">
+        <link rel="icon" href="img/index.ico" />
+        <title>La Patriote Limoges</title>
     </head>
     <body>
     <?php
@@ -34,27 +36,27 @@
                 <li class="menu" id="active"><a href="index.php">Accueil</a></li>
                 <li class="menu"><a href="#">Inscription</a>
                     <ul class="submenu">
-                        <li><a href="pages/inscription.html">Inscription</a></li>
-                        <li><a href="pages/faq.html">FAQ</a></li>
+                        <li><a href="pages/inscription.php">Inscription</a></li>
+                        <li><a href="pages/faq.php">FAQ</a></li>
                     </ul>
                 </li>
                 <li class="menu"><a href="#">Activités</a>
                     <ul class="submenu">
-                        <li><a href="pages/babygym.html">Babygym</a></li>
-                        <li><a href="pages/accessgym.html">Access Gym</a></li>
-                        <li><a href="pages/horaires.html">Horaires</a></li>
+                        <li><a href="pages/babygym.php">Babygym</a></li>
+                        <li><a href="pages/accessgym.php">Access Gym</a></li>
+                        <li><a href="pages/horaires.php">Horaires</a></li>
                     </ul>
                 </li>
                 <li class="menu"><a href="#">Le club</a>
                     <ul class="submenu">
-                        <li><a href="pages/historique.html">Historique</a></li>
+                        <li><a href="pages/historique.php">Historique</a></li>
                         <li><a href="pages/entraineurs.php">Entraineurs</a></li>
                     </ul>
                 </li>
                 <li class="menu"><a href="#">Nous contacter</a>
                     <ul class="submenu">
-                        <li><a href="pages/noustrouver.html">Nous trouver</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
+                        <li><a href="pages/noustrouver.php">Nous trouver</a></li>
+                        <li><a href="pages/contact.php">Contact</a></li>
                     </ul>
                 </li>
             </ul>
@@ -117,10 +119,11 @@
                 }
             }
         ?>
+        <br/>
+        
         
         <div id="footer">
             <div id="sponsors">
-                <p>Nos sponsors :<br/>
                 <img src="img/hu.jpg" alt="hyperU"/>
                 <img src="img/coop.jpg" alt="Coop"/>
                 <img src="img/hv.jpg" alt="Haute-Vienne"/>
@@ -128,20 +131,20 @@
                 <img id="cnds" src="img/mds.png" alt="Ministère"/>
             </div> 
             <div id="rezo">
-                <img src="img/fb.png" alt="fb"/>
+                <p>Nous contacter :<br/>
+                116 Avenue Montjovis - 87100 Limoges <br/> Téléphone : <span class="info"> 05 55 77 90 94</span> - Mail : <span class="info">patriote-coop.87@ffgym.com</span> <br/> Ou sur <a href="https://www.facebook.com/lapatriotegymlimoges/" target="blank">Facebook</a></p>
             </div>  
-
-            
-            
-            <?php 
-                if(isset($_SESSION['usrnm'])) {
-                    echo('Bonjour '.$_SESSION['usrnm'].'!'); 
-                    echo('<li id="active"><a href="php/logout.php">Déconnexion</a></li>');
-                }
-                else{
-                    echo('<li id="active"><a href="php/login.php">Connexion</a></li>');
-                }
-            ?>
+            <div id="conn">
+                <?php 
+                    if(isset($_SESSION['usrnm'])) {
+                        echo('Bonjour '.$_SESSION['usrnm'].'!'); 
+                        echo('<p><a href="php/logout.php">Déconnexion</a></p>');
+                    }
+                    else{
+                        echo('<p><a href="php/login.php">Connexion</a></p>');
+                    }
+                ?>
+            </div>
         </div>
     </section>
     </body>
