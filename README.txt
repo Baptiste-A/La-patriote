@@ -3,10 +3,8 @@
 -Mail : précisé en bas
  Mdp : Patriote87
 -mettre redirection sur quomodo
-
-A VOIR :
-
--page (modifiable) "meilleurs palmarès"
+-enlever "nom de l'image" sur l'acceuil
+-agrandire textarea sur entraineur
 
 -------------------------------------------------------------------------------
 
