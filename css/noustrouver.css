@@ -7,6 +7,7 @@ iframe {
 #droite {
     vertical-align: top;
     width: 75%;
+    margin-top: 0;
 }
 
 .contenu {
@@ -38,7 +39,7 @@ iframe {
 @media only screen and (max-width: 1375px) {
     .cellule {
         width: 48%;
-        overflow: auto;
+        
     }
 }
 
@@ -47,5 +48,9 @@ iframe {
     .cellule {
         display: block;
         width: 100%;
+    }
+
+    #texte {
+        overflow: auto;
     }
 }

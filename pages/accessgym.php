@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!doctype html>
 <html lang="fr">
     <head>
@@ -75,34 +77,39 @@
     
             <div class="contenu" id="horaires">
                 <h1>Les Horaires des groupes Access Gym 2018-2019</h1>
-                <table>
-                    <tr>
-                        <td>Access Gym 1 GAF (6-8 ans)</td>
-                        <td>Mardi de 18H00 à 19H15</td>
-                        <td> ghljnhlqsketrnh:qlswkjhl:kqdwfjhl:iwdqhjolmiwsdr de 13H45 à 15H00</td>
-                    </tr>
-                    <tr>
-                        <td>Access Gym 2 GAF (9-12 ans)</td>
-                        <td>Mercredi de 15H00 à 16H30</td>
-                        <td>Jeudi de 18H00 à 19H30</td>
-                    </tr>
-                    <tr>
-                        <td>Access Gym 3 GAF</td>
-                        <td>Mercredi de 15H00 à 16H30</td>
-                    </tr>
-                    <tr>
-                        <td>École de GYM Loisir ADOS GAF (12-15 ans)</td>
-                        <td>Lundi de 18H00 à 20H00</td>
-                    </tr>
-                    <tr>
-                        <td>Access Gym GAM Benjamins-Minimes (9-12 ans)</td>
-                        <td>Mercredi de 15H00 à 16H30</td>
-                    </tr>
-                    <tr>
-                        <td>Access Gym GAM Poussins</td>
-                        <td>Jeudi de 18H00 à 19H30</td>
-                    </tr>
-                </table>
+
+                <?php
+
+                    include("../php/connexion.php");
+
+                    $reponse = $db->query('SELECT * FROM horaire_groupe_accesgym');
+
+                    echo"<table>";
+
+                    while ($donnees = $reponse->fetch()){
+
+                        echo"   <tr>";
+                        echo"       <td>".$donnees['groupe']."</td>";
+                        echo"       <td>".$donnees['horaire']."</td>";
+                        if(isset($_SESSION['usrnm'])) {
+                            echo"       <td>";
+                            echo"           <form method=\"POST\" action=\"../php/modif-horaire-groupe-accesgym.php?id=".$donnees['id']."\" />";
+                            echo"               <input type=\"text\" name=\"group\" id=\"group\" placeholder=\"Groupe\" />";
+                            echo"               <input type=\"text\" name=\"horaire\" id=\"horaire\" placeholder=\"Horaire\" />";
+                            echo"               <input type=\"submit\" name=\"submit\" value=\"Modifier\" />";
+                            echo"           </form>";
+                            echo"       </td>";
+                        }
+                        echo"   </tr>";
+                        
+
+                    }
+
+                    echo"</table>";
+
+                ?> 
+
+               
                 <br>
             </div>
             <div id="footer">

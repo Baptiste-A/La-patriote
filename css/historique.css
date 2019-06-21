@@ -1,6 +1,13 @@
 #droite {
     background-color: #F2F2F2;
     vertical-align: top;
+    margin: 3%;
+    padding: 2%;
+}
+
+#gauche {
+    margin: 3%;
+    padding: 2%;
 }
 
 .contenu, .contenu h1 {

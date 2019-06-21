@@ -87,7 +87,8 @@
                 </tr>
                 <tr>
                     <td class="instruction" id="texte-rouge"><span class="red"><span class="numero">*  </span>L'attestation médicale remplace le certificat médical dans le cas où la personne 
-                        était licenciée l'année 2017-2018 et avait fourni le certificat médical de non contre-indication de pratique à la gymnastique. </span></td>
+                        était licenciée l'année 2017-2018 et avait fourni le certificat médical de non contre-indication de pratique à la gymnastique. Les compétiteurs doivent fournir un 
+                        certificat médical tous les ans.</span></td>
                 </tr>
                 <tr>
                     <td class="instruction" id="texte-rouge"><span class="red"><span class="numero">**  </span>Tous les documents sont à imprimer et à fournir lors de l'inscription, SAUF la fiche 

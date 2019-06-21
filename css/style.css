@@ -7,14 +7,15 @@ body{
     color: #404040;
 }
 
+::selection{
+    background-color: #444;
+    color: white;
+  }
+  
+  /* Firefox */
 ::-moz-selection {
-    color: none;
-    background: none;
-}
-
-::selection {
-    color: none;
-    background: none;
+    background-color: #444;
+    color: white;
 }
 
 #bandeau {

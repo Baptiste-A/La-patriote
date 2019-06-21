@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!doctype html>
 <html lang="fr">
     <head>
@@ -68,32 +70,38 @@
 
         <div class="contenu" id="horaires">
             <h1>Horaires 2018-2019</h1>
-            <table>
-                <tr>
-                    <td>Baby Gym 1 (15-24 mois)</td>
-                    <td>Samedi de 17H00 à 17H30</td>
-                </tr>
-                <tr>
-                    <td>Baby Gym 2 (2 ans)</td>
-                    <td>Samedi de 9H00 à 9H45</td>
-                </tr>
-                <tr>
-                    <td>Baby Gym 3 (3 ans)</td>
-                    <td>Le Mercredi de 10H00 à 10H45</td>
-                    <td>Le Samedi de 10H00 à 10H45</td>
-                </tr>
-                <tr>
-                    <td>Baby Gym 4 (4 ans)</td>
-                    <td>Le Mercredi de 17H00 à 18H00</td>
-                    <td>le Vendredi de 17H30 à 18H30</td>
-                </tr>
-                <tr>
-                    <td>Baby Gym 5 (5 ans)</td>
-                    <td>Le Mercredi de 18H00 à 19H00</td>
-                    <td>le Vendredi de 18H30 à 19H30</td>
-                    <td>Le Samedi de 11H00 à 12H00</td>
-                </tr>
-            </table>
+
+            <?php
+
+                include("../php/connexion.php");
+
+                $reponse = $db->query('SELECT * FROM horaire_groupe_babygym');
+
+                echo"<table>";
+
+                while ($donnees = $reponse->fetch()){
+
+                    echo"   <tr>";
+                    echo"       <td>".$donnees['groupe']."</td>";
+                    echo"       <td>".$donnees['horaire']."</td>";
+                    if(isset($_SESSION['usrnm'])) {
+                        echo"       <td>";
+                        echo"           <form method=\"POST\" action=\"../php/modif-horaire-groupe-babygym.php?id=".$donnees['id']."\" />";
+                        echo"               <input type=\"text\" name=\"group\" id=\"group\" placeholder=\"Groupe\" />";
+                        echo"               <input type=\"text\" name=\"horaire\" id=\"horaire\" placeholder=\"Horaire\" />";
+                        echo"               <input type=\"submit\" name=\"submit\" value=\"Modifier\" />";
+                        echo"           </form>";
+                        echo"       </td>";
+                    }
+                    echo"   </tr>";
+                    
+
+                }
+
+                echo"</table>";
+
+            ?>
+
             <br>
         </div>
 

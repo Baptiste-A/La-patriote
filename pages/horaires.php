@@ -1,7 +1,9 @@
+<?php session_start(); ?>
+
 <!doctype html>
 <html lang="fr">
     <head>
-        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/horaires.css">
         <link rel="icon" href="../img/index.ico" />
@@ -53,173 +55,144 @@
 
         <div class="contenu" id="inscription">
             <h1>Horaires des entraînements des groupes compétitifs</h1>
+            <p>Tous les groupes compétitifs s'entrainent à La Borie.</p>
+
             <table>
-                <tr>
-                    <td>Groupes Compétitifs</td>
-                    <td>Jours</td>
-                    <td>Horaires</td>
-                    <td>Gymnase</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">POUSSINES (GAF)</td>
-                    <td>Mercredi</td>
-                    <td>14H00- 16H00<br>14H00-17H00 (détections)</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td>Samedi</td>
-                    <td>9H30-11H30<br>9H30-12H30 (détections)</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">FEDERALES B (GAF)</td>
-                    <td>Mardi</td>
-                    <td>18H00-20H00</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td>Vendredi</td>
-                    <td>18H00-20H00</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">FEDERALES A3 (GAF)</td>
-                    <td>Lundi</td>
-                    <td>18H00-20H00</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td>Mercredi</td>
-                    <td>18H00 - 20H00</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">FEDERALES A2 (GAF)</td>
-                    <td>Mardi</td>
-                    <td>18H00-20H00</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td>Vendredi</td>
-                    <td>18H00-20H00</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td>Samedi</td>
-                    <td>13H00-15H00</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">FEDERALES A1 (GAF)</td>
-                    <td>Lundi</td>
-                    <td>17H00-20H00</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td>Mercredi</td>
-                    <td>17H00-20H00</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td>Samedi</td>
-                    <td>13H00-16H00</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">PERFORMANCES ET GAM</td>
-                    <td>Lundi</td>
-                    <td>17H00-20H00</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td>Jeudi</td>
-                    <td>18H00-21H00</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td>Samedi</td>
-                    <td>15H00-18H00</td>
-                    <td>La Borie</td>
-                </tr>
-                <tr>
-                    <td>TEAM GYM (Mixte)</td>
-                    <td>Samedi</td>
-                    <td>15H00-16H30</td>
-                    <td>La Borie</td>
-                </tr>
-            </table>
+                   <tr>
+                       <td>Groupes Compétitifs</td>
+                       <td>Horaires</td>
+                   </tr>
+
+            <?php
+
+                include("../php/connexion.php");
+                
+                $reponse = $db->query('SELECT * FROM horaire_groupe_compet');
+
+                while ($donnees = $reponse->fetch()){
+
+                    echo"   <tr>";
+                    echo"       <td>".$donnees['groupe']."</td>";
+                    echo"       <td>".$donnees['horaire']."</td>";
+                    if(isset($_SESSION['usrnm'])) {
+                        echo"       <td>";
+                        echo"           <form method=\"POST\" action=\"../php/modif-horaire-groupe-compet.php?id=".$donnees['id']."\" />";
+                        echo"               <input type=\"text\" name=\"group\" id=\"group\" placeholder=\"Groupe\" />";
+                        echo"               <input type=\"text\" name=\"horaire\" id=\"horaire\" placeholder=\"Horaire\" />";
+                        echo"               <input type=\"submit\" name=\"submit\" value=\"Modifier\" />";
+                        echo"           </form>";
+                        echo"       </td>";
+                    }
+                    echo"   </tr>";
+                    
+
+                }
+
+                echo"</table>";
+
+            ?>
 
             <h1>Horaires des Groupes Adultes</h1>
             <p>Les cours des groupes Baby Gym, écoles des Gym, Gym d'entretien se déroulent tous dans Le Gymnase de la Patriote (116 Avenue Montjovis).<br>
-            Le cours Adultes aux Agrès se déroule à La Borie ( 185 Avenue Albert Thomas).</p>
-            <table>
-                <tr>
-                    <td>Loisir aux Agrès Adultes</td>
-                    <td>Mardi de 20H00 à 22H00</td>
-                </tr>
-                <tr>
-                    <td>Gym d'entretien</td>
-                    <td>Mardi de 20H00 à 21H00</td>
-                </tr>
-            </table>
+            Le cours Adultes aux Agrès se déroule à La Borie (185 Avenue Albert Thomas).</p>
+
+            <?php
+
+                include("../php/connexion.php");
+                
+                $reponse = $db->query('SELECT * FROM horaire_groupe_adulte');
+
+                echo"<table>";
+
+                while ($donnees = $reponse->fetch()){
+
+                    echo"   <tr>";
+                    echo"       <td>".$donnees['groupe']."</td>";
+                    echo"       <td>".$donnees['horaire']."</td>";
+                    if(isset($_SESSION['usrnm'])) {
+                        echo"       <td>";
+                        echo"           <form method=\"POST\" action=\"../php/modif-horaire-groupe-adulte.php?id=".$donnees['id']."\" />";
+                        echo"               <input type=\"text\" name=\"group\" id=\"group\" placeholder=\"Groupe\" />";
+                        echo"               <input type=\"text\" name=\"horaire\" id=\"horaire\" placeholder=\"Horaire\" />";
+                        echo"               <input type=\"submit\" name=\"submit\" value=\"Modifier\" />";
+                        echo"           </form>";
+                        echo"       </td>";
+                    }
+                    echo"   </tr>";
+                    
+
+                }
+
+                echo"</table>";
+
+            ?>
 
             <h1>Horaires Babygym</h1>
-            <table>
-                <tr>
-                    <td>Baby Gym 1 (15-24 mois)</td>
-                    <td>Samedi de 17H00 à 17H30</td>
-                </tr>
-                <tr>
-                    <td>Baby Gym 2 (2 ans)</td>
-                    <td>Samedi de 9H00 à 9H45</td>
-                </tr>
-                <tr>
-                    <td>Baby Gym 3 (3 ans)</td>
-                    <td>Le Mercredi de 10H00 à 10H45</td>
-                    <td>Le Samedi de 10H00 à 10H45</td>
-                </tr>
-                <tr>
-                    <td>Baby Gym 4 (4 ans)</td>
-                    <td>Le Mercredi de 17H00 à 18H00</td>
-                    <td>le Vendredi de 17H30 à 18H30</td>
-                </tr>
-                <tr>
-                    <td>Baby Gym 5 (5 ans)</td>
-                    <td>Le Mercredi de 18H00 à 19H00</td>
-                    <td>le Vendredi de 18H30 à 19H30</td>
-                    <td>Le Samedi de 11H00 à 12H00</td>
-                </tr>
-            </table>
+
+            <?php
+
+                include("../php/connexion.php");
+
+                $reponse = $db->query('SELECT * FROM horaire_groupe_babygym');
+
+                echo"<table>";
+
+                while ($donnees = $reponse->fetch()){
+
+                    echo"   <tr>";
+                    echo"       <td>".$donnees['groupe']."</td>";
+                    echo"       <td>".$donnees['horaire']."</td>";
+                    if(isset($_SESSION['usrnm'])) {
+                        echo"       <td>";
+                        echo"           <form method=\"POST\" action=\"../php/modif-horaire-groupe-babygym.php?id=".$donnees['id']."\" />";
+                        echo"               <input type=\"text\" name=\"group\" id=\"group\" placeholder=\"Groupe\" />";
+                        echo"               <input type=\"text\" name=\"horaire\" id=\"horaire\" placeholder=\"Horaire\" />";
+                        echo"               <input type=\"submit\" name=\"submit\" value=\"Modifier\" />";
+                        echo"           </form>";
+                        echo"       </td>";
+                    }
+                    echo"   </tr>";
+                    
+
+                }
+
+                echo"</table>";
+
+            ?> 
 
             <h1>Les Horaires Access Gym</h1>
-            <table>
-                <tr>
-                    <td>Access Gym 1 GAF (6-8 ans)</td>
-                    <td>Mardi de 18H00 à 19H15</td>
-                    <td> ghljnhlqsketrnh:qlswkjhl:kqdwfjhl:iwdqhjolmiwsdr de 13H45 à 15H00</td>
-                </tr>
-                <tr>
-                    <td>Access Gym 2 GAF (9-12 ans)</td>
-                    <td>Mercredi de 15H00 à 16H30</td>
-                    <td>Jeudi de 18H00 à 19H30</td>
-                </tr>
-                <tr>
-                    <td>Access Gym 3 GAF</td>
-                    <td>Mercredi de 15H00 à 16H30</td>
-                </tr>
-                <tr>
-                    <td>École de GYM Loisir ADOS GAF (12-15 ans)</td>
-                    <td>Lundi de 18H00 à 20H00</td>
-                </tr>
-                <tr>
-                    <td>Access Gym GAM Benjamins-Minimes (9-12 ans)</td>
-                    <td>Mercredi de 15H00 à 16H30</td>
-                </tr>
-                <tr>
-                    <td>Access Gym GAM Poussins</td>
-                    <td>Jeudi de 18H00 à 19H30</td>
-                </tr>
-            </table>
+
+            <?php
+
+                include("../php/connexion.php");
+
+                $reponse = $db->query('SELECT * FROM horaire_groupe_accesgym');
+
+                echo"<table>";
+
+                while ($donnees = $reponse->fetch()){
+
+                    echo"   <tr>";
+                    echo"       <td>".$donnees['groupe']."</td>";
+                    echo"       <td>".$donnees['horaire']."</td>";
+                    if(isset($_SESSION['usrnm'])) {
+                        echo"       <td>";
+                        echo"           <form method=\"POST\" action=\"../php/modif-horaire-groupe-accesgym.php?id=".$donnees['id']."\" />";
+                        echo"               <input type=\"text\" name=\"group\" id=\"group\" placeholder=\"Groupe\" />";
+                        echo"               <input type=\"text\" name=\"horaire\" id=\"horaire\" placeholder=\"Horaire\" />";
+                        echo"               <input type=\"submit\" name=\"submit\" value=\"Modifier\" />";
+                        echo"           </form>";
+                        echo"       </td>";
+                    }
+                    echo"   </tr>";
+                    
+
+                }
+
+                echo"</table>";
+
+            ?> 
+
         </div>
         <div id="footer">
             <div id="sponsors">

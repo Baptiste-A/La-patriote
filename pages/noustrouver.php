@@ -1,4 +1,4 @@
-s<!doctype html>
+<!doctype html>
 <html lang="fr">
     <head>
         <meta charset="utf-8">
@@ -56,7 +56,7 @@ s<!doctype html>
                 <div class="cellule" id="map">
                     <iframe src="https://www.google.com/maps/d/embed?mid=15CUhzjiLhpOwtJ8szCX1UOJDeia8G_bT"></iframe>
                 </div>
-                <div class="cellule">
+                <div class="cellule" id="texte">
                     <div class="contenu" id="droite">
                         <h1>Nos gymnases</h1>
                         <p>Avec plus de 300 licenciés depuis 2012, et 365 licenciés en 2016-2017, La Patriote a créé depuis 10 ans  2 plate-formes d'entraînement :
