@@ -16,7 +16,7 @@ body{
 ::-moz-selection {
     background-color: #444;
     color: white;
-}
+    }
 
 #bandeau {
     background-color: #0f1c5f;
@@ -166,7 +166,7 @@ nav li:hover .submenu{
 
  
 #footer{
-    height: 140px;
+    height: 146px;
     background-color: #4e4e4e;
     color: #bbbbbb;
     text-align: center;
@@ -383,7 +383,9 @@ nav li:hover .submenu{
         margin-left: 10px;
         margin-right: 10px;
     }
-
+    #sponsors{
+        margin-left: -10%;
+    }
 }
 
 @media only screen and (max-width: 1220px) {
@@ -478,6 +480,35 @@ nav li:hover .submenu{
     nav > ul > li {
         width: 100%;
     }
+
+    #footer {
+        height: 250px;
+    } 
+
+    #conn {
+        display: none;
+    }
+
+    #rezo {
+        width: 90%;
+    }
+
+    #sponsors {
+        margin-left: 0;
+    }
+
+    #rezo p, #sponsors  {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #sponsors, #rezo {
+        display: block;
+    }
+    #footer {
+        height: 250px;
+    }
 }
 
 @media only screen and (max-width: 710px) {
@@ -534,6 +565,9 @@ nav li:hover .submenu{
         font-size: 34px;
         margin-top: 3.5%;
     }
+    #sponsors {
+        margin-left: 0%;
+    }
 }
 
 @media only screen and (max-width: 530px) {
@@ -578,6 +612,9 @@ nav li:hover .submenu{
     #bandeau #titre h1 {
         font-size: 28px;
         margin-top: 5%;
+    }
+    #footer {
+        height: 350px;
     }
 }
 
