@@ -4,6 +4,7 @@
 -enlever "nom de l'image" sur l'acceuil
 -agrandir textarea sur entraineur
 -mettre variable de session "url" dans le header du login
+-responsive sur l'index (2 images)
 
 -------------------------------------------------------------------------------
 
