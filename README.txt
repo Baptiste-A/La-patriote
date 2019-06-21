@@ -3,7 +3,7 @@
 -mettre redirection sur quomodo
 -enlever "nom de l'image" sur l'acceuil
 -agrandir textarea sur entraineur
--mettre variable de session "url" dans le header du login
+-mettre variable de session "url" dans le header du login + modifier la redirection des horaires sur babygym et accessgym
 -responsive sur l'index (2 images)
 
 -------------------------------------------------------------------------------
