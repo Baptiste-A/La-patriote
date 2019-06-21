@@ -62,6 +62,12 @@
             </ul>
         </nav>
 
+        <div id="bandeau-facebook">
+            <a href="https://www.facebook.com/lapatriotegymlimoges/" target="blank">
+                <div>facebook</div>
+            </a>
+        </div>
+
         <div class="contenu" id="gauche">
             <img src=<?php  echo($resultat['chemin']); ?> alt="image"/>
         </div>
