@@ -1,7 +1,6 @@
 -Mail : précisé en bas
- Mdp : Patriote87
+ Mdp : Patriote872017
 -mettre redirection sur quomodo
--responsive sur l'index (2 images)
 
 -------------------------------------------------------------------------------
 
