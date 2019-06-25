@@ -1,7 +1,7 @@
 -Mail : précisé en bas
  Mdp : Patriote87
 -mettre redirection sur quomodo
--mettre variable de session "url" dans le header du login + modifier la redirection des horaires sur babygym et accessgym
+-mettre variable de session "url" dans le header du login
 -responsive sur l'index (2 images)
 
 -------------------------------------------------------------------------------
