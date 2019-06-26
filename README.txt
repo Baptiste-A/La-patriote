@@ -1,5 +1,5 @@
--Mail : précisé en bas
- Mdp : Patriote872017
+-régler téléchargements page inscription ($resultat est le meme a chaque fois)
+-mettre 'required' dans le formulaire de contact
 -mettre redirection sur quomodo
 
 -------------------------------------------------------------------------------
